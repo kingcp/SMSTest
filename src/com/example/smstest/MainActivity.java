@@ -17,12 +17,16 @@ public class MainActivity extends ActionBarActivity {
 	private String APPSECRET = "8a9f019900e33dba11ab3bf3bba9ff7e";
 	private Button btn1;
 
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
          
 		SMSSDK.initSDK(getApplicationContext(), APPKEY, APPSECRET);
+		
+		btn1 = (Button) findViewById(R.id.button1);
+		
 		btn1.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
